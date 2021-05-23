@@ -1,0 +1,58 @@
+/* color: #263248;  blue
+
+color: #ff9800 !important;
+
+background-color: #F5F5F5; */
+
+
+.navbar-brand {
+    font-weight: 600 !important;
+    font-size: 25px !important;
+    margin-right: 3rem !important;
+}
+.new-bg {
+    background-color: #263248;
+}
+.new-link {
+    color: #fff !important;
+    padding: 5px 12px !important;;
+}
+
+.new-link:hover {
+    color: #ff9800 !important;
+}
+
+footer {
+    background-color: #F5F5F5;
+    padding: 25px;
+}
+.social {
+    /* margin-top: 20px; */
+}
+.social a {
+    color: #263248;
+    font-size: 22px;
+    margin: 10px 5px;
+}
+i.fab.fa-facebook-f {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 12px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+
+i.fab.fa-linkedin-in {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+i.fab.fa-instagram {
+    /* background-color: #9e9e9ed1; */
+    padding: 6px 8px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+}
+.text {
+    color: #263248;
+}

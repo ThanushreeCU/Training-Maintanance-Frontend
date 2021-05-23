@@ -1,0 +1,53 @@
+<form action="" method="POST" #form="ngForm" (ngSubmit)="onsubmit(form.value)">
+    <div class="container mt-5">
+        <div class="form-row" *ngFor="let obj of dataarray; let i=index">
+            <div class="form-group col-md-2 "> <label for="" class="" style="margin-left: 40px;">Batch</label>
+                <select class="form-control" name="batch" #batch="ngModel" ngModel>
+                    <option>batch1</option>
+                    <option>batch2</option>
+                    <option>batch3</option>
+                </select> </div>
+            <div class="form-group col-md-2 "> <label for="" class="" style="margin-left: 40px;">Technology</label>
+                <select class="form-control" name="technology" #technology="ngModel" ngModel>
+
+                    <option>Technologies</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Java FullStack</option>
+                    <option>Mean Stack</option>
+                    <option>Data Science</option>
+                    <option>SQL</option>
+                    <option>Mern Stack</option>
+                </select> </div>
+            <div class="form-group col-md-2"> <label for="" style="margin-left: 40px;">Trainer</label>
+                <select class="form-control" name="trainer" #trainer="ngModel" ngModel>
+                    <option>Trainers</option>
+                    <option>Vikas</option>
+                    <option>Chandan</option>
+                    <option>Rajshekhar</option>
+                    <option>Jasmine</option>
+                    <option>Abhilash</option>
+                    <option>Rahul</option>
+                </select> </div>
+            <div class=" col-md-3 form-group" style="margin-top: 32px;">
+                <input type="text" class="form-control" placeholder="" name="fromtodate" #fromtodate='ngModel' ngModel
+                    bsDaterangepicker [minDate]="minDate" [maxDate]="maxDate" placeholder="Form To Date">
+            </div>
+            <div class="form-group col-md-1">
+                <label for=" " style="margin-left: 20px;">Time</label>
+                <input type="time" class="form-control" name="fromtime" #fromtime="ngModel" ngModel>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="" style="margin-left: 20px;">ToTime</label>
+                <input type="time" class="form-control" name="totime" #totime="ngModel" ngModel>
+            </div>
+            <div class="form-group col-md-1">
+                <button (click)="delForm(i)" type="submit" class="btn btn-danger" style="margin-top: 32px;">-</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success" style="margin-left: 43px;">Submit</button>
+    </div>
+</form>
+<button (click)="addForm()" type="submit" class="btn btn-success "
+    style="margin-top: -64px; margin-left: 400px;">+</button>

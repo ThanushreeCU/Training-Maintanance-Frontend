@@ -1,0 +1,61 @@
+<!-- <p>batch-info works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Footer</title>
+</head>
+
+<body>
+  <button type="button" class="float-right ty-download"><i class="fa fa-download" aria-hidden="true"></i></button>
+  <button type="submit" class="float-right ty-print"><i class="fas fa-print"></i></button>
+  <div class="container">
+    <div class="col-md-6  mt-4">
+      <h3 class="ty-heading">Batch Details</h3>
+      <table class="table table-hover table-bordered">
+        <thead class="text-white ty-header">
+          <tr>
+            <td>batchcode</td>
+            <td>client</td>
+            <td>technology</td>
+            <td>batchtype</td>
+            <td>costpercandi</td>
+            <td>location</td>
+            <td>startdate</td>
+            <td>enddate</td>
+            <td>traineetype</td>
+            <td>invoice</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of service.batchDetails">
+            <td>{{data.batchcode}}</td>
+            <td>{{data.client}}</td>
+            <td>{{data.technology}}</td>
+            <td>{{data.batchtype}}</td>
+            <td>{{data.costpercandi}}</td>
+            <td>{{data.location}}</td>
+            <td>{{data.startdate}}</td>
+            <td>{{data.enddate}}</td>
+            <td>{{data.traineetype}}</td>
+            <td>{{data.invoice}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class=" mt-4 mb-4" id="ty-pagination">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</body>
+
+</html>

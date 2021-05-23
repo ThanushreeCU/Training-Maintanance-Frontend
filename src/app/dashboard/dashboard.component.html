@@ -1,0 +1,82 @@
+<!-- //card -->
+<div id="dashboard">
+  <div class="main-section ty-chart1" id="card">
+    <div class="statscounts" id="counter">
+      <div class="dashbord D1">
+        <div class="icon-section">
+          <i class="fa fa-users" aria-hidden="true"></i><br>
+          <small style="font-size: 18px;">Clients</small>
+          <div class="statwrap">
+            <span class="stat-count" style="font-size: 30px;">400</span>
+            <small>+</small>
+          </div>
+        </div>
+        <div class="detail-section">
+          <a href="http://testyantra.com/about-us">More Info </a>
+        </div>
+      </div>
+      <div class="dashbord dashbord-green">
+        <div class="icon-section">
+          <i class="fa fa-money" aria-hidden="true"></i><br>
+          <small style="font-size: 18px;">Paid Batches</small>
+          <div class="statwrap">
+            <span class="stat-count" style="font-size: 30px;">500</span>
+            <small>+</small>
+          </div>
+        </div>
+        <div class="detail-section">
+          <a href="paidinfo.html">More Info </a>
+        </div>
+      </div>
+      <div class="dashbord dashbord-orange">
+        <div class="icon-section">
+          <i class="fa fa-bell" aria-hidden="true"></i><br>
+          <small style="font-size: 18px;">Free Batches</small>
+          <div class="statwrap">
+            <span class="stat-count " style="font-size: 30px;">600</span>
+            <small>+</small>
+          </div>
+        </div>
+        <div class="detail-section">
+          <a href="paidinformation.html">More Info </a>
+        </div>
+      </div>
+      <div class="dashbord dashbord-skyblue">
+        <div class="icon-section">
+          <i class="fa fa-comments" aria-hidden="true"></i><br>
+          <small style="font-size: 18px;"> Business Growth</small>
+          <div class="statwrap">
+            <span class="stat-count " style="font-size: 30px;">700</span>
+            <small>+</small>
+          </div>
+        </div>
+        <div class="detail-section">
+          <a href="business.html">More Info </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- //semi-circle-technology -->
+  <a routerLink="/batches">
+    <div id="technology" class="ty-chart1" (click)="getTechnologies()"></div>
+   </a>
+  <div class="row">
+    <div class=" col-md-6">
+      <highcharts-chart [Highcharts]="highcharts" [options]="chartOptions2" class="ty-chart1"></highcharts-chart>
+    </div>
+    <div class=" col-md-6">
+      <highcharts-chart [Highcharts]="highcharts" [options]="chartOptions3" class="ty-chart1"></highcharts-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 ty-chart1" style="width: 900px; height: 500px;right: 200px;position: relative;">
+      <google-chart #chart [title]="title" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options"
+        [width]="width" [height]="height">
+      </google-chart>
+    </div>
+    <div class="col-md-6 ty-chart1" style="width: 900px; height: 500px;">
+      <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    </div>
+  </div>
+</div>

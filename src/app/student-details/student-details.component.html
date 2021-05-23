@@ -1,0 +1,60 @@
+<div>
+  <section>
+    <!--for demo wrap-->
+    <h1>Students Details</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <!-- <th>Student Id</th> -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Type</th>
+            <th>User Id</th>
+            <th>Password</th>
+            <th>Email Id</th>
+            <th>Mobile No</th>
+            <th>Gender</th>
+            <th>Home Town</th>
+            <th>State</th>
+            <!-- <th>10th Aggregate</th> -->
+            <!-- <th>12th Aggregate</th> -->
+            <!-- <th>Degree Aggregate</th> -->
+            <th>Degree</th>
+            <!-- <th>Degree Stream</th> -->
+            <!-- <th>Degree Yop</th> -->
+            <!-- <th>College Name</th> -->
+            <!-- <th>College Location</th> -->
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr *ngFor='let student of service.studentdetails'>
+            <!-- <td>{{student._id}}</td> -->
+            <td>{{student.name}}</td>
+            <td>{{student.LastName}}</td>
+            <td>{{student.UserType}}</td>
+            <td>{{student.UserId}}</td>
+            <td>{{student.Password}}</td>
+            <td>{{student.EmailID}}</td>
+            <td>{{student.Mobile}}</td>
+            <td>{{student.Gender}}</td>
+            <td>{{student.Hometown}}</td>
+            <td>{{student.State}}</td>
+            <!-- <td>{{student.Tenth}}</td> -->
+            <!-- <td>{{student.XIIth_Diploma_ITI_Aggregate}}</td> -->
+            <!-- <td>{{student.Degree_Aggregate}}</td> -->
+            <td>{{student.Degree}}</td>
+            <!-- <td>{{student.Degree_Stream}}</td>
+               <td>{{student.Degree_YOP}}</td>
+               <td>{{student.College_Name}}</td>
+               <td>{{student.CollegeLocation}}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
